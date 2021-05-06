@@ -15,9 +15,9 @@ put absolute path to your FreeCAD lib in setup.py
 
 ### Preprocess Fusion360 Raw data to reconstruction sequence data (each step contains current shape, target shape and extrusion shape)
 
-Step1: Create "data" folder in the root, put "fusion" and "extrude" in the data folder -> /data/fusion and /data/extrude
+Create "data" folder in the root, put "fusion" and "extrude" in the data folder -> /data/fusion and /data/extrude
 
-Step2: python dataset_fusion.py 
+python dataset_fusion.py 
 
 --fusion_path "path to your fusion reconstruction data folder"
 
@@ -37,11 +37,17 @@ python train_preprocess.py
 ### Testing/Infering reconstruction sequences
 
 cd experiments/exp_infer
+
 python infer.py
 
 --option "the option for ranking the proposed extrusions: random/heur/agent"
 
 --data_path "path to your processed fusion data folder"
+
+--max_time "time limit for the search to terminate"
+
+--max_step "maximum sequence length"
+
 
 
 

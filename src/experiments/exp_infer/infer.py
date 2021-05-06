@@ -52,14 +52,9 @@ def infer(seq_id, sort_option, data_path, max_time, max_step):
     best_sol=SearchSolution()
     dfs_best_recon(start_zone_graph, max_step, max_time, expand_width, sort_option, best_sol, start_time, os.path.join(folder, seq_id), agent)
 
-def infer_all(sort_option, data_path):
+def infer_all(sort_option, data_path, max_time, max_step):
 
     all_ids = os.listdir(data_path)
-
-    
-    
-    max_time = 300
-    max_step = 15
 
     for seq_id in all_ids:
 
@@ -76,10 +71,12 @@ def infer_all(sort_option, data_path):
 processed_data_folder = "../processed_files/processed_data/"
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--option', default='agent', type=str, help='infer option')
+    parser.add_argument('--option', default='heur', type=str, help='infer option')
     parser.add_argument('--data_path', default='../../../data/fusion_processed', type=str)
+    parser.add_argument('--max_time', default=300, type=float)
+    parser.add_argument('--max_step', default=15, type=int)
     args = parser.parse_args()
-    infer_all(args.option, args.data_path)
+    infer_all(args.option, args.data_path, args.max_time, args.max_step)
 
     
 
