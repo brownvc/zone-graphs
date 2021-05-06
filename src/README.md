@@ -21,13 +21,13 @@ We use the [Fusion360GalleryDataset](https://github.com/AutodeskAILab/Fusion360G
 
 ### Preprocess Fusion360 Raw data to reconstruction sequence data (each step contains current shape, target shape and extrusion shape)
 
-Create "data" folder in the root, put "fusion" and "extrude" in the data folder -> /data/fusion and /data/extrude
+Downloaded the above fusion and extrude_tool 
 ```
 python dataset_fusion.py 
 
 --fusion_path "path to your fusion reconstruction data folder"
 
---extrusion_path "path to your fusion GT extrusion data folder"
+--extrusion_path "path to your fusion GT extrusion tool data folder"
 
 --output_path "path to your output processed fusion data folder"
 ```
