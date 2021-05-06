@@ -20,7 +20,9 @@ Step1: Create "data" folder in the root, put "fusion" and "extrude" in the data 
 Step2: python dataset_fusion.py 
 
 --fusion_path "path to your fusion reconstruction data folder"
+
 --extrusion_path "path to your fusion extrusion data folder"
+
 --output_path "path to your output processed fusion data folder"
 
 ### Generating training data
@@ -28,6 +30,7 @@ Step2: python dataset_fusion.py
 python train_preprocess.py
 
 --data_path "path to your processed fusion data folder"
+
 --output_path "path to your output processed data for training"
 
 
@@ -37,5 +40,9 @@ cd experiments/exp_infer
 python infer.py
 
 --option "the option for ranking the proposed extrusions: random/heur/agent"
+
 --data_path "path to your processed fusion data folder"
+
+
+
 
