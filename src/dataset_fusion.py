@@ -257,9 +257,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--fusion_path', default='../data/fusion/reconstruction', type=str)
     parser.add_argument('--extrusion_path', default='../data/extrude', type=str)
-    parser.add_argument('--processed_fusion_path', default='../data/fusion_processed', type=str)
+    parser.add_argument('--output_path', default='../data/fusion_processed', type=str)
     parser.add_argument('--reposition', default=False, type=bool)
 
     args = parser.parse_args()
 
-    preprocess_fusion_data(args.fusion_path, args.extrusion_path, args.processed_fusion_path, args.reposition)
+    preprocess_fusion_data(args.fusion_path, args.extrusion_path, args.output_path, args.reposition)

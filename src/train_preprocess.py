@@ -184,10 +184,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='train_preprocess')
     parser.add_argument('--data_path', default='../data/fusion_processed', type=str)
-    parser.add_argument('--processed_data_path', default='processed_data', type=str)
+    parser.add_argument('--output_path', default='processed_data', type=str)
     args = parser.parse_args()
 
     split_data_for_training(args.data_path)
-    process(args.data_path, args.processed_data_path)
+    process(args.data_path, args.output_path)
 
 
