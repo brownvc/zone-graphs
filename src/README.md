@@ -11,7 +11,7 @@
 
 ### FreeCAD path setup
 
-put absolute path to your FreeCAD lib in setup.py
+Please download and compile FreeCAD and put absolute path to your FreeCAD lib in setup.py
 
 ### Dataset
 
